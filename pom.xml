@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>uk.ac.rothamsted.ide.textextractor</groupId>
+    <artifactId>textextractor</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <!-- JSAP arguments to run extraction, setting up input and output directory -->
+                <!-- Use two hypnens before extract -->
+                <!--configuration-->
+                    <!--mainClass>uk.ac.rothamsted.ide.textextractor.Main</mainClass-->
+                    <!--arguments>
+                        <argument><-extract</argument>
+                        <argument>-i H:\html-corpus</argument>
+                        <argument>-o H:\text-from-html-corpus</argument>
+                    </arguments-->
+                <!--/configuration-->
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <!-- java simple argument parser -->
+        <dependency>
+            <groupId>com.martiansoftware</groupId>
+            <artifactId>jsap</artifactId>
+            <version>2.1</version>
+        </dependency>
+        <!-- Apache Tika toolkit library for extracting text -->
+        <dependency>
+            <groupId>org.apache.tika</groupId>
+            <artifactId>tika-core</artifactId>
+            <version>2.6.0</version>
+        </dependency>
+        <!-- Apache Tika for parsing documents of various types e.g. pdf, html -->
+        <dependency>
+            <groupId>org.apache.tika</groupId>
+            <artifactId>tika-parsers-standard-package</artifactId>
+            <version>2.6.0</version>
+        </dependency>
+        <!-- see https://logging.apache.org/log4j/2.x/maven-artifacts.html -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.19.0</version>
+        </dependency>
+        <!-- Core logging library -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.19.0</version>
+        </dependency>
+        <!-- Log4j2 SLF4J Binding -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>2.19.0</version>
+        </dependency>
+    </dependencies>
+
+</project>
