@@ -48,4 +48,4 @@ mvn exec:java -Dexec.mainClass=Main -Dexec.args="--extract -i H:\html-corpus -o 
 ```
 
 ### TODO
-- Merge file extension checking for all available Parser types in initFileIndex method Utils
+- Merge file extension checking for all available Parser types in initFileIndex method in Utils.java
