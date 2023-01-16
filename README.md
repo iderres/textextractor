@@ -25,12 +25,12 @@ detecting the format automatically before extracting text.
     <artifactId>exec-maven-plugin</artifactId>
     <version>3.1.0</version>
     <configuration>
-        <mainClass>Mainuk.ac.rothamsted.ide.textextractor.Main</mainClass>
+        <mainClass>uk.ac.rothamsted.ide.textextractor.Main</mainClass>
         <arguments>
             <argument>--extract</argument>
             <argument>-i H:\html-corpus</argument>
             <argument>-o H:\text-from-html-corpus</argument>
-        </arguments-->
+        </arguments>
     </configuration>
 </plugin>
 ```
@@ -42,7 +42,7 @@ detecting the format automatically before extracting text.
    <version>3.1.0</version>
 </plugin>
 ```
-- from terminal issue the command with arguments as follows:
+- from terminal issue the command with arguments as follows (not working at this moment):
 ```shell
 mvn exec:java -Dexec.mainClass=Main -Dexec.args="--extract -i H:\html-corpus -o H:\extracted-text"
 ```
