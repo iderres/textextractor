@@ -46,3 +46,6 @@ detecting the format automatically before extracting text.
 ```shell
 mvn exec:java -Dexec.mainClass=Main -Dexec.args="--extract -i H:\html-corpus -o H:\extracted-text"
 ```
+
+### TODO
+- Merge file extension checking for all available Parser types in initFileIndex method Utils
